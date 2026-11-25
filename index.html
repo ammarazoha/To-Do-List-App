@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo">✓</div>
+      <p class="eyebrow">MAKE TODAY COUNT</p>
+      <h1>My To-Do List</h1>
+      <p class="subtitle">One small step at a time.</p>
+    </header>
+
+    <section class="task-card">
+      <form id="taskForm" class="add-form">
+        <input id="taskInput" type="text" placeholder="What do you need to do?" maxlength="100" autocomplete="off" required>
+        <button type="submit">Add task</button>
+      </form>
+
+      <div class="list-heading">
+        <h2>My tasks <span id="taskCount">0</span></h2>
+        <button id="clearCompleted" class="text-button" type="button">Clear completed</button>
+      </div>
+
+      <nav class="filters" aria-label="Filter tasks">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="active" type="button">Active</button>
+        <button class="filter" data-filter="completed" type="button">Completed</button>
+      </nav>
+
+      <ul id="taskList" class="task-list"></ul>
+      <p id="emptyMessage" class="empty-message">No tasks yet. Add your first task above!</p>
+    </section>
+
+    <footer>Tasks are saved automatically in this browser.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
